@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title> Automation JavaScript Client Demo </title>
+		
+		<object id = "AutomationServerComponent" name="AutomationServerComponent"
+		classid = "clsid:26E23E71-0117-4390-BB23-14E797DADED6"></object>
+		
+		<!-- Provide CLSID. AutomationServerComponent is our object name -->
+
+	</head>
+	
+	<body>
+		<script language = "JavaScript" type = "text/JavaScript">
+		function comMethod_click()
+		{
+			var num1Value = parseInt(document.getElementById('num1').value, 10);
+			var num2Value = parseInt(document.getElementById('num2').value, 10);
+			
+			var returnCode = AutomationServerComponent.SumOfTwoIntegers(num1.value, num2.value);
+			
+			<!-- Our Function name case sensitive with respective parameters>
+		
+			var msg = "Sum of " + num1.value + " and " + num2.value + " is: " + returnCode;
+			
+			alert("SumOfTwoIntegers invoke success!")
+			alert("Automation Server:  " + msg)
+		
+		
+		}
+		
+	</script>
+	<font face = "verdana" color = "#B404AE" size = "5">
+		Automation Server Component SumOfTwoIntegers method invocation demo through JavaScript: <br> <br> </font>
+		
+	<font face = "verdana">
+	<table>
+		<tr>
+			<td>
+			
+				<label> Num1 </label>
+				<textarea id = "num1" rows = "1" cols = "7"> 10 </textarea>
+				<label> Num2 </label>
+				<textarea id = "num2" rows = "1" cols = "7"> 20 </textarea>
+				<button id = "myButton" onclick = "comMethod_click();"> Call Com Method </button>
+			
+			</td>
+			
+		</tr>
+		
+		</table>
+		<font face = "Verdana" color = "#0040FF" size = "3">
+		<br><br> <br><br> <br><br>
+		-Dedicated to our Dr. Vijay Gokhale Sir
+		</body>
+	</html>
+		
